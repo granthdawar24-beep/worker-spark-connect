@@ -67,5 +67,10 @@ function startAnimations() {
   animateOnScroll();
 }
 
-/* The page script builds the lists first, then fires this event. */
-document.addEventListener("sahaay:content-ready", startAnimations);
+/* The page script builds the lists first, then fires this event.
+   If it already finished before this file loaded, start straight away. */
+if (window.sahaayContentReady) {
+  startAnimations();
+} else {
+  document.addEventListener("sahaay:content-ready", startAnimations);
+}

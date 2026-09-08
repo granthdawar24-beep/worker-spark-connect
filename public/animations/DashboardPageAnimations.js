@@ -25,5 +25,10 @@ function revealCards() {
   });
 }
 
-/* The page script fires this event once the cards have been built. */
-document.addEventListener("sahaay:content-ready", revealCards);
+/* The page script fires this event once the cards have been built.
+   If it already finished before this file loaded, reveal straight away. */
+if (window.sahaayContentReady) {
+  revealCards();
+} else {
+  document.addEventListener("sahaay:content-ready", revealCards);
+}

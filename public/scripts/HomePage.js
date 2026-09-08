@@ -84,5 +84,7 @@ slot("principles").innerHTML = homePageContent.principles.items
 setText("footer-line1", homePageContent.footer.line1);
 setText("footer-line2", homePageContent.footer.line2);
 
-/* Tell the animation file that the page content is ready. */
+/* Tell the animation file that the page content is ready.
+   The flag covers the case where the animation file loads afterwards. */
+window.sahaayContentReady = true;
 document.dispatchEvent(new CustomEvent("sahaay:content-ready"));

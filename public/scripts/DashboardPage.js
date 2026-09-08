@@ -134,6 +134,7 @@ async function build() {
     })
     .join("");
 
+  window.sahaayContentReady = true;
   document.dispatchEvent(new CustomEvent("sahaay:content-ready"));
 }
 
