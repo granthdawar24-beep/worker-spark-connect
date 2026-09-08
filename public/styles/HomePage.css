@@ -1,0 +1,186 @@
+/* ===========================================================
+   FILE: /styles/HomePage.css
+   PAGE: /pages/HomePage.html
+
+   THIS FILE CONTROLS:
+   - The home page hero layout
+   - The service list, journey list, category cards
+   - The principles grid and the closing banner
+
+   EDIT HERE TO:
+   - Change spacing, colours or layout of home page sections
+
+   Styles used by every page live in /styles/global.css
+   =========================================================== */
+
+.hero {
+  background:
+    radial-gradient(1000px 420px at 12% -10%, #dff0e6 0%, transparent 60%),
+    var(--colour-page);
+  padding: 60px 0 40px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 46px;
+  align-items: center;
+}
+
+.hero-text h1 { margin-top: 14px; letter-spacing: -0.02em; }
+
+.hero-subtitle { font-size: 1.2rem; font-weight: 600; max-width: 34ch; }
+
+.hero-description { color: var(--colour-ink-soft); max-width: 52ch; }
+
+.hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+
+.hero-picture img {
+  width: 100%;
+  border-radius: 22px;
+  display: block;
+  box-shadow: var(--shadow);
+}
+
+/* ---------- PROMISE STRIP ---------- */
+.promise-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  background: var(--colour-surface);
+  border: 1px solid var(--colour-line);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  margin-top: 8px;
+}
+
+.promise-item strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  color: var(--colour-brand);
+}
+
+.promise-item span { font-size: 0.92rem; color: var(--colour-ink-soft); }
+
+/* ---------- SECTIONS ---------- */
+.section { padding-top: 62px; }
+
+.section-intro { color: var(--colour-ink-soft); max-width: 62ch; }
+
+/* ---------- SERVICES ---------- */
+.service-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+
+.service-chip {
+  background: var(--colour-surface);
+  border: 1px solid var(--colour-line);
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+}
+
+/* ---------- JOURNEY ---------- */
+.journey-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.journey-item {
+  display: flex;
+  gap: 14px;
+  background: var(--colour-surface);
+  border: 1px solid var(--colour-line);
+  border-left: 4px solid var(--colour-brand);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.journey-number {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--colour-accent);
+  font-size: 1.2rem;
+  min-width: 26px;
+}
+
+.journey-item h3 { margin-bottom: 4px; }
+.journey-item p { margin: 0; font-size: 0.92rem; color: var(--colour-ink-soft); }
+
+/* ---------- CATEGORIES ---------- */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.category-card {
+  background: var(--colour-surface);
+  border: 1px solid var(--colour-line);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.category-card h3 { color: var(--colour-brand-dark); }
+.category-card p { color: var(--colour-ink-soft); font-size: 0.95rem; margin: 0; }
+
+/* ---------- UNION CARD ---------- */
+.union-card { background: var(--colour-brand-soft); border-color: #c7e0d2; }
+
+.tick-list { list-style: none; padding: 0; margin: 10px 0 0 0; }
+
+.tick-list li {
+  padding-left: 28px;
+  position: relative;
+  margin-bottom: 8px;
+  font-size: 0.97rem;
+}
+
+.tick-list li::before {
+  content: "•";
+  position: absolute;
+  left: 6px;
+  color: var(--colour-brand);
+  font-weight: 700;
+}
+
+/* ---------- PRINCIPLES ---------- */
+.principle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.principle-item {
+  background: var(--colour-surface);
+  border: 1px solid var(--colour-line);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 0.93rem;
+}
+
+/* ---------- CLOSING ---------- */
+.closing-card {
+  background: var(--colour-brand);
+  color: #fff;
+  border-radius: 22px;
+  padding: 44px;
+  text-align: center;
+}
+
+.closing-card h2 { color: #fff; }
+
+/* ---------- SMALL SCREENS ---------- */
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .promise-strip,
+  .journey-list,
+  .category-grid,
+  .principle-grid { grid-template-columns: 1fr; }
+}

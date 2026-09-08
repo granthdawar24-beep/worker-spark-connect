@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+==========================================================
+PAGE NAME:      Worker Dashboard Page
+FILE LOCATION:  /pages/DashboardPage.html
+
+RELATED FILES:
+  Styles:      /styles/global.css  and  /styles/DashboardPage.css
+  JavaScript:  /scripts/DashboardPage.js
+  Animations:  /animations/DashboardPageAnimations.js
+  Content:     /data/DashboardPageContent.js
+  Guide:       /docs/DashboardPageGuide.md
+
+PURPOSE:
+  This file controls the structure of the signed-in worker's account page:
+  verification status, saved records, matched job opportunities and
+  payment information.
+
+  Text lives in /data/DashboardPageContent.js
+==========================================================
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Worker Account — Sahaay</title>
+    <meta name="description" content="Your Sahaay worker account: verification status, payout bank account, skill category and matched jobs." />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Noto+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/DashboardPage.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/pages/HomePage.html">
+          <span class="brand-mark">स</span>
+          <span>
+            <span class="brand-name">Sahaay</span>
+            <span class="brand-tag">Cooperative gig services</span>
+          </span>
+        </a>
+        <nav class="site-nav">
+          <a href="/pages/RegisterPage.html">Continue registration</a>
+          <button class="button button-secondary" type="button" data-role="sign-out"></button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="dashboard-main">
+      <div class="container">
+        <section class="dashboard-head">
+          <h1 data-content="title"></h1>
+          <p data-content="intro"></p>
+          <div class="status-row">
+            <span class="pill" data-role="stage"></span>
+            <span class="pill pill-accent" data-role="category"></span>
+          </div>
+        </section>
+
+        <section class="record-grid" data-role="records"></section>
+
+        <section class="jobs-section">
+          <h2 data-content="jobs-title"></h2>
+          <p class="jobs-note" data-role="jobs-note"></p>
+          <div class="job-grid" data-role="jobs"></div>
+        </section>
+
+        <section class="payment-note card" data-content="payment-note"></section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Sahaay — the worker owns their identity, account and earnings.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/scripts/DashboardPage.js"></script>
+    <script type="module" src="/animations/DashboardPageAnimations.js"></script>
+  </body>
+</html>

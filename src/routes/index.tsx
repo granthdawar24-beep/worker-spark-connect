@@ -1,24 +1,37 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+/**
+ * The Sahaay website is built as plain HTML, CSS and JavaScript files.
+ * The real home page lives at /pages/HomePage.html.
+ * This route simply sends visitors of "/" to that page.
+ */
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Sahaay — Cooperative Gig Services Platform for Verified Workers" },
+      {
+        name: "description",
+        content:
+          "Sahaay is a government-owned services marketplace where workers register independently, verify identity and skills, and are paid directly.",
+      },
+      { property: "og:title", content: "Sahaay — Cooperative Gig Services Platform" },
+      {
+        property: "og:description",
+        content:
+          "Register independently, verify your identity and skills, get matched with work and get paid directly into your own bank account.",
+      },
+    ],
+    scripts: [{ children: 'window.location.replace("/pages/HomePage.html");' }],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="flex min-h-screen items-center justify-center bg-background">
+      <a href="/pages/HomePage.html" className="text-lg underline">
+        Continue to Sahaay
+      </a>
     </div>
   );
 }

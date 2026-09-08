@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+==========================================================
+PAGE NAME:      Login Page
+FILE LOCATION:  /pages/LoginPage.html
+
+RELATED FILES:
+  Styles:      /styles/global.css  and  /styles/LoginPage.css
+  JavaScript:  /scripts/LoginPage.js
+  Animations:  /animations/LoginPageAnimations.js
+  Content:     /data/LoginPageContent.js
+  Guide:       /docs/LoginPageGuide.md
+
+PURPOSE:
+  This file controls the structure of the worker sign-in page.
+
+  Edit this file to add or remove form fields.
+  Text lives in /data/LoginPageContent.js
+==========================================================
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign in — Sahaay Worker Account</title>
+    <meta name="description" content="Sign in to your Sahaay worker account with your mobile number or email address." />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Noto+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/LoginPage.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/pages/HomePage.html">
+          <span class="brand-mark">स</span>
+          <span>
+            <span class="brand-name">Sahaay</span>
+            <span class="brand-tag">Cooperative gig services</span>
+          </span>
+        </a>
+        <nav class="site-nav">
+          <a class="button button-secondary" href="/pages/RegisterPage.html">Register</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="login-main">
+      <div class="container login-container">
+        <section class="card login-card">
+          <h1 data-content="title"></h1>
+          <p class="login-intro" data-content="intro"></p>
+
+          <div class="message message-error message-hidden" data-role="error"></div>
+
+          <form data-role="login-form">
+            <div class="field">
+              <label for="identifier" data-content="identifier-label"></label>
+              <input id="identifier" name="identifier" type="text" required autocomplete="username" />
+            </div>
+            <div class="field">
+              <label for="password" data-content="password-label"></label>
+              <input id="password" name="password" type="password" required autocomplete="current-password" />
+            </div>
+            <button class="button button-primary button-wide" type="submit" data-content="submit"></button>
+          </form>
+
+          <p class="login-footer">
+            <span data-content="register-prompt"></span>
+            <a href="/pages/RegisterPage.html" data-content="register-link"></a>
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="/scripts/LoginPage.js"></script>
+    <script type="module" src="/animations/LoginPageAnimations.js"></script>
+  </body>
+</html>
