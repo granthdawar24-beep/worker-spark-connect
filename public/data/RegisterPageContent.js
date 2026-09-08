@@ -36,7 +36,7 @@ export const registerPageContent = {
     skills:
       "Choose the route that fits you. A certificate is one way to prove skill. Years of real work are another.",
     activation:
-      "The ₹500 annual membership is charged now, after your verification is complete, and never before.",
+      "The ₹5,000 annual membership is charged now, after your verification is complete, and never before.",
   },
 
   languages: [
@@ -74,7 +74,7 @@ export const registerPageContent = {
 
   membership: {
     title: "Annual platform membership",
-    amount: "₹500 per year",
+    amount: "₹5,000 per year",
     includes: [
       "Access to the job marketplace and direct bookings",
       "Verified worker badge shown to customers",
@@ -83,6 +83,6 @@ export const registerPageContent = {
     ],
     fairnessPromise:
       "Fair-use promise: if you receive fewer than four paid jobs in your first membership year, your next year is free. You should never pay only for access.",
-    payButton: "Pay ₹500 and activate my account",
+    payButton: "Pay ₹5,000 and activate my account",
   },
 };

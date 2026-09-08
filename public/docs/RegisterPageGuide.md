@@ -12,7 +12,7 @@ The seven-step worker registration and verification journey.
 | 4    | Identity          | Aadhaar route, or an alternative government document                  |
 | 5    | Bank verification | The identity name and the bank account holder name must match         |
 | 6    | Skills            | Route A certificate, or Route B practical experience                  |
-| 7    | Activation        | ₹500 annual membership is charged, then the account becomes active    |
+| 7    | Activation        | ₹5,000 annual membership is charged, then the account becomes active    |
 
 ## Which file do I edit?
 
@@ -35,7 +35,7 @@ The seven-step worker registration and verification journey.
   payout account is refused. This protects workers from having earnings redirected.
 - **No formal degree does not mean no skill.** Three or more years of verified
   practical work makes a worker an Experienced Worker, with no certificate needed.
-- The **₹500 fee is charged only at step 7**, after verification is finished.
+- The **₹5,000 fee is charged only at step 7**, after verification is finished.
 - If a worker leaves and comes back, the page resumes at their next unfinished step.
 
 ## Changing the worker category rule
