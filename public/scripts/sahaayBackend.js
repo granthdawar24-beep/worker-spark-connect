@@ -186,7 +186,7 @@ export async function activateMembership(workerId) {
   nextYear.setFullYear(nextYear.getFullYear() + 1);
   const { error } = await backend.from("memberships").insert({
     worker_id: workerId,
-    amount_inr: 500,
+    amount_inr: 5000,
     status: "paid",
     paid_at: new Date().toISOString(),
     valid_until: nextYear.toISOString().slice(0, 10),

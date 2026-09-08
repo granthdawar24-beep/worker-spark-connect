@@ -26,7 +26,7 @@ export const homePageContent = {
 
   promises: [
     { number: "100%", label: "Earnings paid straight to the worker's own bank account" },
-    { number: "₹500", label: "Annual membership, charged only after verification is complete" },
+    { number: "₹5,000", label: "Annual membership, charged only after verification is complete" },
     { number: "12+", label: "Regional languages planned for worker onboarding" },
   ],
 
@@ -58,7 +58,7 @@ export const homePageContent = {
       { step: "5", title: "Bank verification", text: "The payout account must belong to the same verified person." },
       { step: "6", title: "Skill verification", text: "A formal certificate, or evidence of real practical experience." },
       { step: "7", title: "Classification", text: "Verified Professional, Experienced Worker or Apprentice." },
-      { step: "8", title: "Activation", text: "The ₹500 annual membership starts and the worker becomes eligible for jobs." },
+      { step: "8", title: "Activation", text: "The ₹5,000 annual membership starts and the worker becomes eligible for jobs." },
       { step: "9", title: "Job marketplace", text: "A customer books a service and suitable jobs reach the worker." },
       { step: "10", title: "Direct payment", text: "Money is transferred straight to the worker's verified bank account." },
     ],

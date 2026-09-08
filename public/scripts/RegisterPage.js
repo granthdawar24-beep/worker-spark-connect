@@ -155,6 +155,10 @@ async function handleStep(form, action) {
 steps[0].addEventListener("submit", (event) => {
   event.preventDefault();
   const values = readForm(steps[0]);
+  if (values.password !== values.confirmPassword) {
+    showError("The two passwords do not match. Please type the same password in both boxes.");
+    return;
+  }
   handleStep(steps[0], async () => {
     await createWorkerAccount(values);
     document.getElementById("basic-mobile").value = values.mobile;
