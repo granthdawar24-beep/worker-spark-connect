@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!--
+==========================================================
+PAGE NAME:      Worker Registration Page
+FILE LOCATION:  /pages/RegisterPage.html
+
+RELATED FILES:
+  Styles:      /styles/global.css  and  /styles/RegisterPage.css
+  JavaScript:  /scripts/RegisterPage.js
+  Animations:  /animations/RegisterPageAnimations.js
+  Content:     /data/RegisterPageContent.js
+  Guide:       /docs/RegisterPageGuide.md
+
+PURPOSE:
+  This file controls the structure of the seven registration steps:
+    1 Account
+    2 Basic information
+    3 Bank details
+    4 Identity / KYC
+    5 Bank verification
+    6 Skill verification
+    7 Activation and membership
+
+  Edit this file to add, remove or rearrange form fields.
+  Text and list options live in /data/RegisterPageContent.js
+==========================================================
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Worker Registration — Sahaay</title>
+    <meta
+      name="description"
+      content="Register independently on Sahaay: basic details, bank account, identity verification, skill verification and activation."
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Noto+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/RegisterPage.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/pages/HomePage.html">
+          <span class="brand-mark">स</span>
+          <span>
+            <span class="brand-name">Sahaay</span>
+            <span class="brand-tag">Cooperative gig services</span>
+          </span>
+        </a>
+        <nav class="site-nav">
+          <a href="/pages/LoginPage.html">Sign in</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="register-main">
+      <div class="container register-layout">
+        <!-- PROGRESS COLUMN -->
+        <aside class="progress-column">
+          <h2 class="progress-heading" data-content="page-title"></h2>
+          <p class="progress-intro" data-content="page-intro"></p>
+          <ol class="progress-list" data-role="progress-list"></ol>
+        </aside>
+
+        <!-- FORM COLUMN -->
+        <section class="form-column card">
+          <div class="message message-error message-hidden" data-role="error"></div>
+          <div class="message message-good message-hidden" data-role="notice"></div>
+
+          <!-- STEP 1: ACCOUNT -->
+          <form class="step" data-step="0">
+            <h3>Create your account</h3>
+            <p class="step-note" data-note="account"></p>
+            <div class="field">
+              <label for="account-mobile">Mobile number</label>
+              <input id="account-mobile" name="mobile" type="tel" inputmode="numeric" required />
+            </div>
+            <div class="field">
+              <label for="account-email">Email address (optional)</label>
+              <input id="account-email" name="email" type="email" />
+              <p class="field-hint">Leave this empty if you do not use email. Your mobile number will be your login.</p>
+            </div>
+            <div class="field">
+              <label for="account-password">Choose a password</label>
+              <input id="account-password" name="password" type="password" minlength="8" required autocomplete="new-password" />
+              <p class="field-hint">At least 8 characters.</p>
+            </div>
+            <button class="button button-primary button-wide" type="submit">Create my account</button>
+          </form>
+
+          <!-- STEP 2: BASIC INFORMATION -->
+          <form class="step" data-step="1" hidden>
+            <h3>Basic information</h3>
+            <p class="step-note" data-note="basic"></p>
+            <div class="field">
+              <label for="basic-name">Full name</label>
+              <input id="basic-name" name="fullName" type="text" required />
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="basic-mobile">Mobile number</label>
+                <input id="basic-mobile" name="mobile" type="tel" required />
+              </div>
+              <div class="field">
+                <label for="basic-whatsapp">WhatsApp number</label>
+                <input id="basic-whatsapp" name="whatsapp" type="tel" />
+              </div>
+            </div>
+            <div class="field field-inline">
+              <input id="basic-same-whatsapp" name="sameWhatsapp" type="checkbox" />
+              <label for="basic-same-whatsapp">WhatsApp number same as mobile number</label>
+            </div>
+            <div class="field">
+              <label for="basic-address">Address</label>
+              <textarea id="basic-address" name="address" rows="3"></textarea>
+            </div>
+            <div class="field">
+              <label for="basic-language">Preferred language</label>
+              <select id="basic-language" name="language" data-role="language-list"></select>
+            </div>
+            <button class="button button-primary button-wide" type="submit">Save and continue</button>
+          </form>
+
+          <!-- STEP 3: BANK DETAILS -->
+          <form class="step" data-step="2" hidden>
+            <h3>Bank details</h3>
+            <p class="step-note" data-note="bank"></p>
+            <div class="field">
+              <label for="bank-holder">Account holder name (exactly as in the bank)</label>
+              <input id="bank-holder" name="holderName" type="text" required />
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="bank-account">Account number</label>
+                <input id="bank-account" name="accountNumber" type="text" inputmode="numeric" required />
+                <p class="field-hint">Only the last four digits are stored on Sahaay.</p>
+              </div>
+              <div class="field">
+                <label for="bank-ifsc">IFSC</label>
+                <input id="bank-ifsc" name="ifsc" type="text" required />
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="bank-name">Bank name</label>
+                <input id="bank-name" name="bankName" type="text" required />
+              </div>
+              <div class="field">
+                <label for="bank-branch">Branch</label>
+                <input id="bank-branch" name="branch" type="text" />
+              </div>
+            </div>
+            <button class="button button-primary button-wide" type="submit">Save and continue</button>
+          </form>
+
+          <!-- STEP 4: IDENTITY -->
+          <form class="step" data-step="3" hidden>
+            <h3>Identity verification</h3>
+            <p class="step-note" data-note="identity"></p>
+            <div class="field">
+              <label for="identity-route">Verification route</label>
+              <select id="identity-route" name="route">
+                <option value="aadhaar">Aadhaar-based verification (preferred)</option>
+                <option value="alternative">Alternative government document</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="identity-document">Document</label>
+              <select id="identity-document" name="documentType" data-role="document-list"></select>
+            </div>
+            <div class="field">
+              <label for="identity-number">Document number</label>
+              <input id="identity-number" name="documentNumber" type="text" required />
+              <p class="field-hint">Only the last four digits are stored. Sahaay never keeps a full document number.</p>
+            </div>
+            <div class="field">
+              <label for="identity-name">Name exactly as printed on the document</label>
+              <input id="identity-name" name="nameOnDocument" type="text" required />
+            </div>
+            <button class="button button-primary button-wide" type="submit">Verify my identity</button>
+          </form>
+
+          <!-- STEP 5: BANK VERIFICATION -->
+          <form class="step" data-step="4" hidden>
+            <h3>Bank verification</h3>
+            <p class="step-note" data-note="bankCheck"></p>
+            <div class="match-box">
+              <div><span>Name on identity document</span><strong data-role="match-identity"></strong></div>
+              <div><span>Bank account holder</span><strong data-role="match-bank"></strong></div>
+            </div>
+            <button class="button button-primary button-wide" type="submit">Check and link my payout account</button>
+          </form>
+
+          <!-- STEP 6: SKILLS -->
+          <form class="step" data-step="5" hidden>
+            <h3>Skill verification</h3>
+            <p class="step-note" data-note="skills"></p>
+            <div class="field">
+              <label for="skill-trade">Your trade</label>
+              <select id="skill-trade" name="trade" data-role="trade-list"></select>
+            </div>
+            <div class="field">
+              <label for="skill-route">How do you want to prove your skill?</label>
+              <select id="skill-route" name="route">
+                <option value="qualification">Route A — certificate or ITI qualification</option>
+                <option value="experience">Route B — practical work experience</option>
+              </select>
+            </div>
+            <div data-role="qualification-fields">
+              <div class="field">
+                <label for="skill-certificate">Certificate or trade qualification</label>
+                <input id="skill-certificate" name="certificateName" type="text" placeholder="e.g. ITI Electrician (NCVT)" />
+              </div>
+              <div class="field">
+                <label for="skill-issuer">Issuing institute</label>
+                <input id="skill-issuer" name="issuingBody" type="text" placeholder="e.g. Government ITI, Nagpur" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="skill-years">Years of practical work</label>
+              <input id="skill-years" name="yearsExperience" type="number" min="0" max="60" value="0" />
+            </div>
+            <div class="field">
+              <label for="skill-evidence">Evidence of your work</label>
+              <textarea id="skill-evidence" name="evidenceNotes" rows="3" placeholder="Past employers, contractors, references, sample jobs, photographs you can show"></textarea>
+              <p class="field-hint">Workers without certificates are assessed on this evidence and a practical skill check.</p>
+            </div>
+            <button class="button button-primary button-wide" type="submit">Submit for skill verification</button>
+          </form>
+
+          <!-- STEP 7: ACTIVATION -->
+          <form class="step" data-step="6" hidden>
+            <h3 data-content="membership-title"></h3>
+            <p class="step-note" data-note="activation"></p>
+            <div class="membership-box">
+              <span class="pill pill-accent" data-content="membership-amount"></span>
+              <ul class="tick-list" data-role="membership-includes"></ul>
+              <p class="fairness" data-content="membership-fairness"></p>
+            </div>
+            <div class="classification-box" data-role="classification"></div>
+            <button class="button button-accent button-wide" type="submit" data-content="membership-button"></button>
+          </form>
+
+          <!-- DONE -->
+          <div class="step" data-step="7" hidden>
+            <h3>Your account is active</h3>
+            <p>You are now eligible to receive job opportunities that match your verified skills.</p>
+            <a class="button button-primary button-wide" href="/pages/DashboardPage.html">Open my worker account</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="/scripts/RegisterPage.js"></script>
+    <script type="module" src="/animations/RegisterPageAnimations.js"></script>
+  </body>
+</html>

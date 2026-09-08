@@ -1,0 +1,31 @@
+/* ===========================================================
+   FILE: /styles/LoginPage.css
+   PAGE: /pages/LoginPage.html
+
+   THIS FILE CONTROLS:
+   - The centred sign-in card and its spacing
+
+   EDIT HERE TO:
+   - Change the width of the sign-in card
+   - Change spacing around the form
+   =========================================================== */
+
+.login-main {
+  min-height: calc(100vh - 68px);
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(760px 340px at 50% 0%, #dff0e6 0%, transparent 62%),
+    var(--colour-page);
+  padding: 40px 0;
+}
+
+.login-container { display: grid; place-items: center; }
+
+.login-card { width: 100%; max-width: 440px; }
+
+.login-intro { color: var(--colour-ink-soft); font-size: 0.95rem; }
+
+.login-footer { margin: 18px 0 0 0; font-size: 0.92rem; text-align: center; }
+
+.login-footer a { margin-left: 6px; font-weight: 600; }

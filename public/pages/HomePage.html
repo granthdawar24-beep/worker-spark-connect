@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--
+==========================================================
+PAGE NAME:      Home Page
+FILE LOCATION:  /pages/HomePage.html
+
+RELATED FILES:
+  Styles:      /styles/global.css  and  /styles/HomePage.css
+  JavaScript:  /scripts/HomePage.js
+  Animations:  /animations/HomePageAnimations.js
+  Content:     /data/HomePageContent.js
+  Guide:       /docs/HomePageGuide.md
+
+PURPOSE:
+  This file controls the structure and layout of the home page.
+
+  Edit this file to:
+    - Add sections
+    - Remove sections
+    - Rearrange content blocks
+
+  Do NOT put text, styling or animation logic here.
+  Text lives in /data/HomePageContent.js
+==========================================================
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sahaay — Cooperative Gig Services Platform for Verified Workers</title>
+    <meta
+      name="description"
+      content="Sahaay is a government-owned services marketplace where workers register independently, verify identity and skills, and receive payments directly in their own bank account."
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Noto+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/HomePage.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/pages/HomePage.html">
+          <span class="brand-mark">स</span>
+          <span>
+            <span class="brand-name">Sahaay</span>
+            <span class="brand-tag">Cooperative gig services</span>
+          </span>
+        </a>
+        <nav class="site-nav">
+          <a class="nav-hide-small" href="#journey">Worker journey</a>
+          <a class="nav-hide-small" href="#categories">Categories</a>
+          <a href="/pages/LoginPage.html">Sign in</a>
+          <a class="button button-primary" href="/pages/RegisterPage.html">Register</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <span class="pill" data-content="hero-badge"></span>
+            <h1 data-content="hero-title"></h1>
+            <p class="hero-subtitle" data-content="hero-subtitle"></p>
+            <p class="hero-description" data-content="hero-description"></p>
+            <div class="hero-buttons">
+              <a class="button button-primary" href="/pages/RegisterPage.html" data-content="hero-primary"></a>
+              <a class="button button-secondary" href="/pages/LoginPage.html" data-content="hero-secondary"></a>
+            </div>
+          </div>
+          <div class="hero-picture">
+            <img
+              src="/assets/images/homepage/hero-worker.jpg"
+              alt="Verified Indian service workers standing together with their tools"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- PROMISE STRIP -->
+      <section class="container">
+        <div class="promise-strip" data-content="promises"></div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="container section">
+        <h2 data-content="services-title"></h2>
+        <div class="service-list" data-content="services"></div>
+      </section>
+
+      <!-- WORKER JOURNEY -->
+      <section class="container section" id="journey">
+        <h2 data-content="journey-title"></h2>
+        <p class="section-intro" data-content="journey-intro"></p>
+        <ol class="journey-list" data-content="journey"></ol>
+      </section>
+
+      <!-- WORKER CATEGORIES -->
+      <section class="container section" id="categories">
+        <h2 data-content="categories-title"></h2>
+        <p class="section-intro" data-content="categories-intro"></p>
+        <div class="category-grid" data-content="categories"></div>
+      </section>
+
+      <!-- ROLE OF UNIONS -->
+      <section class="container section">
+        <div class="card union-card">
+          <h2 data-content="union-title"></h2>
+          <ul class="tick-list" data-content="union-points"></ul>
+        </div>
+      </section>
+
+      <!-- PRINCIPLES -->
+      <section class="container section">
+        <h2 data-content="principles-title"></h2>
+        <div class="principle-grid" data-content="principles"></div>
+      </section>
+
+      <!-- CLOSING CALL TO ACTION -->
+      <section class="container section">
+        <div class="closing-card">
+          <h2>Register independently. Get verified. Get paid directly.</h2>
+          <a class="button button-accent" href="/pages/RegisterPage.html" data-content="hero-primary-repeat"></a>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <p data-content="footer-line1"></p>
+        <p data-content="footer-line2"></p>
+      </div>
+    </footer>
+
+    <script type="module" src="/scripts/HomePage.js"></script>
+    <script type="module" src="/animations/HomePageAnimations.js"></script>
+  </body>
+</html>

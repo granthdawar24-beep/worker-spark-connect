@@ -1,0 +1,114 @@
+/* ===========================================================
+   FILE: /styles/RegisterPage.css
+   PAGE: /pages/RegisterPage.html
+
+   THIS FILE CONTROLS:
+   - The two-column registration layout
+   - The step progress list on the left
+   - The membership box and the classification result box
+
+   EDIT HERE TO:
+   - Change registration spacing, colours or column widths
+   =========================================================== */
+
+.register-main { padding: 40px 0 80px; }
+
+.register-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ---------- LEFT COLUMN ---------- */
+.progress-column { position: sticky; top: 92px; }
+
+.progress-heading { font-size: 1.6rem; }
+
+.progress-intro { color: var(--colour-ink-soft); font-size: 0.93rem; }
+
+.progress-list { list-style: none; margin: 22px 0 0 0; padding: 0; }
+
+.progress-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 0;
+  color: var(--colour-ink-soft);
+  font-size: 0.95rem;
+}
+
+.progress-badge {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--colour-line);
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.progress-step.is-current { color: var(--colour-ink); font-weight: 700; }
+.progress-step.is-current .progress-badge { background: var(--colour-brand); color: #fff; border-color: var(--colour-brand); }
+
+.progress-step.is-done .progress-badge { background: var(--colour-brand-soft); color: var(--colour-brand-dark); border-color: #c7e0d2; }
+
+/* ---------- RIGHT COLUMN ---------- */
+.form-column { padding: 30px; }
+
+.step-note {
+  color: var(--colour-ink-soft);
+  font-size: 0.93rem;
+  border-left: 3px solid var(--colour-accent);
+  padding-left: 12px;
+  margin-bottom: 22px;
+}
+
+/* ---------- BANK VERIFICATION MATCH BOX ---------- */
+.match-box {
+  display: grid;
+  gap: 12px;
+  background: var(--colour-brand-soft);
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 20px;
+}
+
+.match-box span { display: block; font-size: 0.8rem; color: var(--colour-ink-soft); }
+.match-box strong { font-size: 1.05rem; }
+
+/* ---------- MEMBERSHIP ---------- */
+.membership-box {
+  background: var(--colour-accent-soft);
+  border: 1px solid #f0dcc0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 18px;
+}
+
+.membership-box .tick-list { list-style: none; padding: 0; margin: 14px 0; }
+.membership-box .tick-list li { padding-left: 22px; position: relative; font-size: 0.93rem; margin-bottom: 6px; }
+.membership-box .tick-list li::before { content: "✓"; position: absolute; left: 0; color: var(--colour-good); }
+
+.fairness { font-size: 0.9rem; font-weight: 600; margin: 0; color: var(--colour-warn); }
+
+/* ---------- CLASSIFICATION RESULT ---------- */
+.classification-box {
+  border: 1px dashed var(--colour-brand);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+  background: var(--colour-surface);
+}
+
+.classification-box h4 { margin: 0 0 4px 0; font-family: var(--font-heading); }
+.classification-box p { margin: 0; font-size: 0.9rem; color: var(--colour-ink-soft); }
+
+/* ---------- SMALL SCREENS ---------- */
+@media (max-width: 900px) {
+  .register-layout { grid-template-columns: 1fr; }
+  .progress-column { position: static; }
+  .form-column { padding: 22px; }
+}
