@@ -1,0 +1,74 @@
+/* ===========================================================
+   FILE: /styles/DashboardPage.css
+   PAGE: /pages/DashboardPage.html
+
+   THIS FILE CONTROLS:
+   - The dashboard heading block and status pills
+   - The record cards grid
+   - The job opportunity cards
+
+   EDIT HERE TO:
+   - Change dashboard spacing, colours or card layout
+   =========================================================== */
+
+.dashboard-main { padding: 40px 0 60px; }
+
+.dashboard-head p { color: var(--colour-ink-soft); max-width: 62ch; }
+
+.status-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+
+/* ---------- RECORD CARDS ---------- */
+.record-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.record-card {
+  background: var(--colour-surface);
+  border: 1px solid var(--colour-line);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.record-card h3 { font-size: 1rem; margin-bottom: 12px; }
+
+.record-line { display: flex; justify-content: space-between; gap: 12px; font-size: 0.9rem; padding: 5px 0; }
+
+.record-line span { color: var(--colour-ink-soft); }
+.record-line strong { text-align: right; }
+
+.record-empty { font-size: 0.9rem; color: var(--colour-ink-soft); }
+
+.tick-good { color: var(--colour-good); font-weight: 700; }
+.tick-waiting { color: var(--colour-warn); font-weight: 700; }
+
+/* ---------- JOBS ---------- */
+.jobs-section { margin-top: 50px; }
+
+.jobs-note { color: var(--colour-ink-soft); font-size: 0.93rem; }
+
+.job-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 18px; }
+
+.job-card {
+  background: var(--colour-surface);
+  border: 1px solid var(--colour-line);
+  border-left: 4px solid var(--colour-accent);
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.job-card h3 { font-size: 1.02rem; margin-bottom: 4px; }
+.job-card p { margin: 0 0 10px 0; font-size: 0.88rem; color: var(--colour-ink-soft); }
+.job-pay { font-family: var(--font-heading); font-size: 1.25rem; color: var(--colour-brand); }
+
+.job-card.is-locked { opacity: 0.5; }
+
+/* ---------- PAYMENT NOTE ---------- */
+.payment-note { margin-top: 40px; font-size: 0.94rem; color: var(--colour-ink-soft); }
+
+/* ---------- SMALL SCREENS ---------- */
+@media (max-width: 900px) {
+  .record-grid, .job-grid { grid-template-columns: 1fr; }
+}
