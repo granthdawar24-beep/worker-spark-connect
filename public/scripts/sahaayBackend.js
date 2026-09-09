@@ -85,6 +85,10 @@ export async function saveBasicInformation(workerId, form) {
     whatsapp: form.whatsapp || null,
     address: form.address || null,
     preferred_language: form.language,
+    /* Work preferences decide which jobs this worker is recommended. */
+    job_interests: form.jobInterests || [],
+    preferred_cities: form.preferredCities || [],
+    preferred_areas: form.preferredAreas || null,
     stage: "registered",
     updated_at: new Date().toISOString(),
   });

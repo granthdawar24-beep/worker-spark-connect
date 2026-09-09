@@ -112,3 +112,32 @@
   .progress-column { position: static; }
   .form-column { padding: 22px; }
 }
+
+/* ---------- WORK PREFERENCE CHOICES (step 2) ---------- */
+/* Used by the "Which jobs are you interested in?" and
+   "Where do you want to work?" tick boxes. */
+.group-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.choice-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid rgba(14, 92, 74, 0.25);
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.choice-item input { accent-color: #0e5c4a; }

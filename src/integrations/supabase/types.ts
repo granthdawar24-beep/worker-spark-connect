@@ -166,7 +166,10 @@ export type Database = {
           email: string | null
           full_name: string
           id: string
+          job_interests: string[]
           mobile: string
+          preferred_areas: string | null
+          preferred_cities: string[]
           preferred_language: string
           stage: string
           updated_at: string
@@ -179,7 +182,10 @@ export type Database = {
           email?: string | null
           full_name: string
           id: string
+          job_interests?: string[]
           mobile: string
+          preferred_areas?: string | null
+          preferred_cities?: string[]
           preferred_language?: string
           stage?: string
           updated_at?: string
@@ -192,7 +198,10 @@ export type Database = {
           email?: string | null
           full_name?: string
           id?: string
+          job_interests?: string[]
           mobile?: string
+          preferred_areas?: string | null
+          preferred_cities?: string[]
           preferred_language?: string
           stage?: string
           updated_at?: string

@@ -131,6 +131,23 @@ PURPOSE:
               <label for="basic-language">Preferred language</label>
               <select id="basic-language" name="language" data-role="language-list"></select>
             </div>
+
+            <!-- WORK PREFERENCES: decide which jobs this worker is shown later -->
+            <div class="field">
+              <span class="group-label" data-content="interests-label"></span>
+              <p class="field-hint" data-content="interests-hint"></p>
+              <div class="choice-grid" data-role="interest-list"></div>
+            </div>
+            <div class="field">
+              <span class="group-label" data-content="cities-label"></span>
+              <p class="field-hint" data-content="cities-hint"></p>
+              <div class="choice-grid" data-role="city-list"></div>
+            </div>
+            <div class="field">
+              <label for="basic-areas" data-content="areas-label"></label>
+              <input id="basic-areas" name="preferredAreas" type="text" />
+              <p class="field-hint" data-content="areas-hint"></p>
+            </div>
             <button class="button button-primary button-wide" type="submit">Save and continue</button>
           </form>
 

@@ -79,6 +79,22 @@ export const registerPageContent = {
     ],
   },
 
+  /* WORK PREFERENCES
+     These decide which jobs the worker is shown later on the jobs page.
+     "interestTrades" uses the same list as "trades" above.
+     Add or remove cities here if you open new places for work. */
+  workPreferences: {
+    interestsLabel: "Which jobs are you interested in?",
+    interestsHint: "Tick every type of work you want. We will only recommend these jobs to you.",
+    citiesLabel: "Where do you want to work?",
+    citiesHint: "Tick every city you can travel to. You will only be shown jobs in these cities.",
+    areasLabel: "Preferred areas or localities (optional)",
+    areasHint: "For example: Kothrud, Baner. Leave empty if any area in your city is fine.",
+    interestsRequired: "Please tick at least one type of work you are interested in.",
+    citiesRequired: "Please tick at least one city where you want to work.",
+    cities: ["Delhi", "Mumbai", "Pune", "Bengaluru", "Kolkata"],
+  },
+
   membership: {
     title: "Annual platform membership",
     amount: "₹5,000 per year",

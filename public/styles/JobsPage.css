@@ -68,3 +68,15 @@
 @media (max-width: 900px) {
   .area-grid, .listing-grid { grid-template-columns: 1fr; }
 }
+
+/* ---------- PREFERENCE TOGGLE ---------- */
+/* "Show all jobs" switch above the listings. */
+.preference-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+
+.preference-toggle input { accent-color: #0e5c4a; }
