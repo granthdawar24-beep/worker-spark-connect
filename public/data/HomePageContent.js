@@ -54,7 +54,7 @@ export const homePageContent = {
       { step: "1", title: "Register", text: "The worker creates their own account. No union or agent is required." },
       { step: "2", title: "Basic information", text: "Name, mobile, optional email, WhatsApp, address and preferred language." },
       { step: "3", title: "Bank details", text: "Account holder name, bank, branch and IFSC for direct payment." },
-      { step: "4", title: "Identity check", text: "Aadhaar-based verification, or an alternative document such as PAN or Voter ID." },
+      { step: "4", title: "Identity check", text: "Aadhaar-based verification, or another government photo document such as Voter ID, driving licence or passport." },
       { step: "5", title: "Bank verification", text: "The payout account must belong to the same verified person." },
       { step: "6", title: "Skill verification", text: "A formal certificate, or evidence of real practical experience." },
       { step: "7", title: "Classification", text: "Verified Professional, Experienced Worker or Apprentice." },
