@@ -30,7 +30,7 @@ export const registerPageContent = {
     basic: "Tell us how to reach you and which language you prefer.",
     bank: "Payments for completed jobs go straight into this account. Nobody else receives your money.",
     identity:
-      "Aadhaar-based verification is the preferred route, done through an authorised verification service. If you do not use Aadhaar, choose another accepted government document.",
+      "Aadhaar-based verification is the preferred route, done through an authorised verification service. If you do not use Aadhaar, choose another government document that carries your photograph. Documents without a photo are not accepted.",
     bankCheck:
       "We check that the bank account holder name matches the name on your identity document, so that your earnings cannot be redirected to someone else.",
     skills:
@@ -67,9 +67,16 @@ export const registerPageContent = {
     "Appliance technician",
   ],
 
+  /* Only government documents that carry the holder's photograph are accepted,
+     so that the face on the document can be matched to the worker. */
   identityDocuments: {
     aadhaar: ["Aadhaar (through authorised verification service)"],
-    alternative: ["PAN card", "Voter ID", "Driving licence", "Passport", "MGNREGA job card"],
+    alternative: [
+      "Voter ID (with photo)",
+      "Driving licence (with photo)",
+      "Passport (with photo)",
+      "PAN card (with photo)",
+    ],
   },
 
   membership: {

@@ -41,6 +41,15 @@ Every page and the exact files that control it.
 - Content: `/public/data/DashboardPageContent.js`
 - Guide: `/public/docs/DashboardPageGuide.md`
 
+## AVAILABLE JOBS PAGE
+
+- HTML: `/public/pages/JobsPage.html`
+- CSS: `/public/styles/JobsPage.css` (plus `/public/styles/global.css`)
+- JavaScript: `/public/scripts/JobsPage.js`
+- Animations: `/public/animations/JobsPageAnimations.js`
+- Content: `/public/data/JobsPageContent.js`
+- Guide: `/public/docs/JobsPageGuide.md`
+
 ---
 
 ## SHARED FILES
