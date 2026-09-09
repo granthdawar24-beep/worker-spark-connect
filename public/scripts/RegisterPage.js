@@ -58,6 +58,42 @@ function fillSelect(element, options) {
 fillSelect(document.querySelector('[data-role="language-list"]'), registerPageContent.languages);
 fillSelect(document.querySelector('[data-role="trade-list"]'), registerPageContent.trades);
 
+/* ---------- WORK PREFERENCE TICK BOXES (step 2) ---------- */
+const preferences = registerPageContent.workPreferences;
+
+setText("interests-label", preferences.interestsLabel);
+setText("interests-hint", preferences.interestsHint);
+setText("cities-label", preferences.citiesLabel);
+setText("cities-hint", preferences.citiesHint);
+setText("areas-label", preferences.areasLabel);
+setText("areas-hint", preferences.areasHint);
+
+function fillChoices(element, name, options) {
+  element.innerHTML = options
+    .map(
+      (option) => `
+      <label class="choice-item">
+        <input type="checkbox" name="${name}" value="${option}" />
+        <span>${option}</span>
+      </label>`,
+    )
+    .join("");
+}
+
+fillChoices(document.querySelector('[data-role="interest-list"]'), "jobInterests", registerPageContent.trades);
+fillChoices(document.querySelector('[data-role="city-list"]'), "preferredCities", preferences.cities);
+
+function tickedValues(form, name) {
+  return [...form.querySelectorAll(`input[name="${name}"]:checked`)].map((box) => box.value);
+}
+
+function tickBoxes(form, name, values) {
+  (values || []).forEach((value) => {
+    const box = form.querySelector(`input[name="${name}"][value="${value}"]`);
+    if (box) box.checked = true;
+  });
+}
+
 const identityRouteSelect = document.getElementById("identity-route");
 const documentSelect = document.querySelector('[data-role="document-list"]');
 
