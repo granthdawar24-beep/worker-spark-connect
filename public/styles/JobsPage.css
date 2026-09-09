@@ -1,0 +1,70 @@
+/* ===========================================================
+   FILE: /styles/JobsPage.css
+   PAGE: /pages/JobsPage.html
+
+   THIS FILE CONTROLS:
+   - The jobs page heading block
+   - The "jobs by area" summary tiles
+   - The city and work-type filter bar
+   - The job listing cards
+
+   EDIT HERE TO:
+   - Change jobs page spacing, colours or card layout
+   =========================================================== */
+
+.jobs-main { padding: 40px 0 60px; }
+
+.jobs-head p { color: var(--colour-ink-soft); max-width: 66ch; }
+.jobs-status { font-weight: 600; color: var(--colour-brand); }
+
+/* ---------- AREA SUMMARY ---------- */
+.area-section { margin-top: 34px; }
+.area-section h2 { font-size: 1.25rem; margin-bottom: 14px; }
+
+.area-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+
+.area-tile {
+  background: var(--colour-surface);
+  border: 1px solid var(--colour-line);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.area-tile .area-city { font-family: var(--font-heading); font-size: 1.05rem; }
+.area-tile .area-count { color: var(--colour-accent); font-weight: 700; font-size: 0.9rem; margin-top: 4px; }
+.area-tile .area-list { color: var(--colour-ink-soft); font-size: 0.85rem; margin-top: 8px; line-height: 1.5; }
+
+/* ---------- FILTERS ---------- */
+.filter-bar {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+.filter-bar .field { min-width: 220px; }
+
+/* ---------- LISTINGS ---------- */
+.listing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
+
+.listing-card {
+  background: var(--colour-surface);
+  border: 1px solid var(--colour-line);
+  border-left: 4px solid var(--colour-accent);
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.listing-card h3 { font-size: 1.02rem; margin-bottom: 6px; }
+.listing-place { font-size: 0.9rem; color: var(--colour-ink-soft); margin: 0 0 4px 0; }
+.listing-meta { font-size: 0.82rem; color: var(--colour-ink-soft); margin: 0 0 10px 0; }
+.listing-pay { font-family: var(--font-heading); font-size: 1.2rem; color: var(--colour-brand); }
+
+.listing-card.is-match { border-left-color: var(--colour-brand); }
+.match-flag { display: inline-block; margin-top: 8px; font-size: 0.8rem; font-weight: 700; color: var(--colour-good); }
+
+.no-results { margin-top: 20px; color: var(--colour-ink-soft); }
+
+/* ---------- SMALL SCREENS ---------- */
+@media (max-width: 900px) {
+  .area-grid, .listing-grid { grid-template-columns: 1fr; }
+}

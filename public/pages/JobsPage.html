@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+==========================================================
+PAGE NAME:      Jobs Page
+FILE LOCATION:  /pages/JobsPage.html
+
+RELATED FILES:
+  Styles:      /styles/global.css  and  /styles/JobsPage.css
+  JavaScript:  /scripts/JobsPage.js
+  Animations:  /animations/JobsPageAnimations.js
+  Content:     /data/JobsPageContent.js
+  Guide:       /docs/JobsPageGuide.md
+
+PURPOSE:
+  Shows where jobs are available: a summary of how many jobs are open
+  in each area, and the full list of jobs with city and work filters.
+
+  Text and the job list live in /data/JobsPageContent.js
+==========================================================
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Available Jobs Near You — Sahaay</title>
+    <meta name="description" content="See where household and community jobs are available on Sahaay: filter by city and type of work, with pay and required worker category." />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Noto+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/JobsPage.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/pages/HomePage.html">
+          <span class="brand-mark">स</span>
+          <span>
+            <span class="brand-name">Sahaay</span>
+            <span class="brand-tag">Cooperative gig services</span>
+          </span>
+        </a>
+        <nav class="site-nav">
+          <a href="/pages/DashboardPage.html">My account</a>
+          <a class="button button-primary" href="/pages/RegisterPage.html">Register as a worker</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="jobs-main">
+      <div class="container">
+        <section class="jobs-head">
+          <h1 data-content="title"></h1>
+          <p data-content="intro"></p>
+          <p class="jobs-status" data-role="worker-note"></p>
+        </section>
+
+        <section class="area-section">
+          <h2 data-content="area-summary-title"></h2>
+          <div class="area-grid" data-role="areas"></div>
+        </section>
+
+        <section class="filter-bar">
+          <div class="field">
+            <label for="filter-city" data-content="city-label"></label>
+            <select id="filter-city" data-role="city-filter"></select>
+          </div>
+          <div class="field">
+            <label for="filter-trade" data-content="trade-label"></label>
+            <select id="filter-trade" data-role="trade-filter"></select>
+          </div>
+        </section>
+
+        <section class="listing-grid" data-role="listings"></section>
+        <p class="no-results" data-role="no-results" hidden></p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Sahaay — the worker owns their identity, account and earnings.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/scripts/JobsPage.js"></script>
+    <script type="module" src="/animations/JobsPageAnimations.js"></script>
+  </body>
+</html>
